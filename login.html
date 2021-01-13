@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 头部引入css（先引入插件、再加载自己的） -->
+    <link rel="stylesheet" href="https://www.layuicdn.com/layui/css/layui.css">
+    <link rel="stylesheet" href="./assets/css/login.css">
+</head>
+
+<body>
+
+    <!-- logo图片 -->
+    <div id="logo">
+        <img src="./assets/images/logo.png" alt="">
+    </div>
+
+
+    <!-- 登录的盒子 start -->
+    <div class="login box">
+        <div class="box_title">
+            大事件后台管理系统
+        </div>
+        <!-- 登录的表单 start -->
+        <form class="layui-form" action="">
+            <!-- 第一项：用户名 -->
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-username"></i>
+                <input type="text" name="username" lay-verify="required" autocomplete="off" placeholder="请输入用户名" class="layui-input">
+            </div>
+            <!-- 第二项：密码 -->
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-password"></i>
+                <input type="password" name="password" lay-verify="required" autocomplete="off" placeholder="请输入密码" class="layui-input">
+            </div>
+            <!-- 第三项：登录按钮 -->
+            <div class="layui-form-item">
+                <button type="submit" class="layui-btn layui-btn-fluid layui-bg-blue" lay-submit="" lay-filter="demo1">登录</button>
+            </div>
+            <!-- 第四项：去注册账号 -->
+            <div class="layui-form-item">
+                <a href="javascript:;">去注册账号</a>
+            </div>
+        </form>
+        <!-- 登录的表单 end -->
+    </div>
+    <!-- 登录的盒子 end -->
+
+    <!-- 注册的盒子 start -->
+    <div class="register box">
+        <div class="box_title">
+            大事件后台管理系统
+        </div>
+        <!-- 注册的表单 start -->
+        <form class="layui-form" action="">
+            <!-- 第一项：用户名 -->
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-username"></i>
+                <input id="reg_user" type="text" name="username" lay-verify="required|user" autocomplete="off" placeholder="请输入用户名" class="layui-input">
+                <span style="position: absolute; top: 35px; left: 10px;"></span>
+            </div>
+            <!-- 第二项：密码 -->
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-password"></i>
+                <input type="password" name="password" lay-verify="required|len" autocomplete="off" placeholder="请输入密码" class="layui-input pwd">
+            </div>
+            <!-- 第三项：确认密码 -->
+            <div class="layui-form-item">
+                <i class="layui-icon layui-icon-password"></i>
+                <input type="password" lay-verify="required|len|same" autocomplete="off" placeholder="请输入确认密码" class="layui-input">
+            </div>
+            <!-- 第四项：注册按钮 -->
+            <div class="layui-form-item">
+                <button type="submit" class="layui-btn layui-btn-fluid layui-bg-blue" lay-submit="" lay-filter="demo1">注册</button>
+            </div>
+            <!-- 第五项：去登录 -->
+            <div class="layui-form-item">
+                <a href="javascript:;">去登录</a>
+            </div>
+        </form>
+        <!-- 注册的表单 end -->
+
+        <div id="mpanel5" style="position: absolute; top: 320px;">
+        </div>
+    </div>
+    <!-- 注册的盒子 end -->
+
+
+
+    <!-- body结束之前，引入js（先引入插件、再加载自己的）-->
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/layui/2.5.6/layui.all.min.js"></script>
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/login.js"></script>
+</body>
+
+</html>
